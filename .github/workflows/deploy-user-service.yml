@@ -1,0 +1,12 @@
+name: Deploy user-service
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: ./.github/workflows/service-deploy.yml
+    with:
+      service_name: user-service
+      service_dir: .
